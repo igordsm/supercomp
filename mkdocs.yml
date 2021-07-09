@@ -1,0 +1,112 @@
+site_name: SuperComputação - 2021/1
+site_author: Igor Montagner, Luciano Soares, Antônio Selvatici
+
+extra:
+    materia: SuperComputação
+    professor: Igor Montagner, Antônio Selvatici
+    semestre: 2021/1
+    url_acompanhamentos: http://localhost:8081
+    id_curso: 1
+
+theme:
+  feature:
+    tabs: true
+  name: 'material'
+  palette:
+      primary: 'grey'
+      accent: 'red'
+  font:
+    text: Roboto
+    code: Roboto Mono
+#  custom_dir: 'custom_theme'
+
+docs_dir: material
+site_dir: docs
+
+repo_url: https://github.com/insper/supercomp
+repo_name: "SuperComp"
+site_url: https://insper.github.io/supercomp/
+
+
+nav:
+    - Home: index.md
+    - Burocracias: sobre.md
+
+    - Aulas:
+        - "01 - Introdução": aulas/01-introducao/index.ipynb
+        - aulas/02-03-implementacao-c++/index.md
+        - aulas/04-profiling/index.md
+        - aulas/05-heuristicas/index.md
+        - aulas/06-aleatorizacao/index.md
+        - aulas/07-busca-local/index.md
+        - aulas/08-busca-global/index.md
+        - aulas/09-busca-global-II/index.md
+        - aulas/10-branch-and-bound/index.md
+        - aulas/11-branch-and-bound/index.md
+        - aulas/12-paralelismo/index.md
+        - aulas/13-paralelismo-tarefas-dados/index.md
+        - aulas/14-exercicios/index.md
+        - aulas/15-efeitos-colaterais/index.md
+        - aulas/16-efeitos-colaterais-II/index.md
+        - aulas/17-intro-gpu/index.md
+        - aulas/18-iteradores/index.md
+        - aulas/19-transformacoes/index.md
+        - aulas/20-gpu-random/index.md
+
+    - Projeto:
+        - projetos/index.md
+        - projetos/heuristico.md
+        - projetos/busca-local.md
+        - projetos/busca-exaustiva.md
+        - projetos/relatorio-1.md
+        - projetos/paralelismo-multicore.md
+        - projetos/paralelismo-gpu.md
+        - projetos/relatorio-2.md
+
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
+    - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
+    - js/markdown-enhancer.js
+
+extra_css:
+    - css/printing.css
+    - css/extra.css
+
+markdown_extensions:
+  - markdown.extensions.tables
+  - tables
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: code
+      check_paths: true
+plugins:
+    - search
+    - mknotebooks

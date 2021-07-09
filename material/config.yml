@@ -1,0 +1,14 @@
+extensions:
+  - translate-admonitions
+  - quiz
+  - short-questions
+  - progress-check
+  - slides
+  - counter
+
+config:
+  short-questions:
+      text: "Validar"
+  counter:
+    - question
+    - tip

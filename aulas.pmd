@@ -1,0 +1,49 @@
+```{python, echo=False}
+import tabulate
+import pandas as pd
+```
+# Burocracias 
+
+## Turma B
+
+* Horários: 
+    * TER - 09:45
+    * SEX - 13:30
+    * Atendimento SEX - 15:30
+
+??? note "Alunos"
+    **TBA**    
+
+
+??? note "Plano de aulas"
+```{python, results='md', echo=False}
+t1 = pd.read_excel('plano-de-aulas-t1.xlsx')
+t1 = t1.dropna(subset=['Data'])
+t1['Data'] = t1['Data'].apply(lambda x: x.strftime('%d/%m'))
+print('\n'.join(['    %s'%l for l in tabulate.tabulate(t1[['Data', 'Questão/Problema',
+'Conteúdo/Atividade']], headers=['Data', 'Questão/Problema',
+'Conteúdo/Atividade'], tablefmt='pipe', showindex=False).split('\n')  ]))
+```
+
+## Turma A
+
+* Horários: 
+    * QUA - 13:30
+    * SEX - 07:30
+    * Atendimento SEX - 09:30
+
+??? note "Alunos"
+    **TBA**
+
+
+
+??? details "Plano de aulas"
+
+```{python, results='md', echo=False}
+t2 = pd.read_excel('plano-de-aulas-t2.xlsx')
+t2 = t2.dropna(subset=['Data'])
+t2['Data'] = t2['Data'].apply(lambda x: x.strftime('%d/%m'))
+print('\n'.join(['    %s'%l for l in tabulate.tabulate(t2[['Data', 'Questão/Problema',
+'Conteúdo/Atividade']], headers=['Data', 'Questão/Problema',
+'Conteúdo/Atividade'], tablefmt='pipe', showindex=False).split('\n')]))
+```
